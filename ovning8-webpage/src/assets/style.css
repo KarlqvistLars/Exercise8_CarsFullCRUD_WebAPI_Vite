@@ -1,0 +1,149 @@
+html {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    margin-bottom: -1rem;
+}
+
+main, .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.car-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-card .btn-group {
+    margin-top: 20px;           
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;  
+    transform: translate(0, -10px);
+}
+
+/* Knapp i redigeringsläge */
+.editing {
+    background-color: #e65100 !important;
+    border-color: #e65100 !important;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+img {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dialog (Native Modal) */
+dialog {
+    border: none;
+    padding: 0;
+    background: transparent;
+    overflow: visible;
+}
+
+/* Mörk bakgrund */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Den vita panelen */
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 2rem;
+    min-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,.3);   
+}
+
+/* Inputfält inuti dialogen */
+.dialog-content .edit-input {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Knapprad */
+.button-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.display span {
+    flex: 1;
+    margin: 0.5rem;
+}
+
+.foto-cap {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.outline {
+    width: 150px;
+    height: 50px;
+    border: 1px solid #ccc;
+    color: #777;
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.8rem;
+} 
+
+.outline:hover {
+    background-color: #ccc;
+    border-color: #111;
+    color: #333;
+}   
+
+.contrast {
+    background-color: #e65100 !important;
+    border-color: #e65100 !important;
+    color: white !important;
+}
+
+.contrast:hover {
+    background-color: #ff7e38 !important;
+    border-color: #e70000 !important;
+    color: #ccc !important;
+}

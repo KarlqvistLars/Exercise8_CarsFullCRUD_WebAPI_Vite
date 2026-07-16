@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger's Retro Cars</title>
+</head>
+<body class="container">
+    <header>
+        <h1>Baby You can drive my car …</h1>
+        <p>Enkel frontend som pratar med vårt Minimal API</p>
+    </header>
+    <main>
+        <div id="image-container"></div>
+        
+        <p class="foto-cap">Bildkälla: <a href="https://www.volvocars.com" target="_blank">Volvo Cars</a>. Bilden används enbart i illustrativt syfte för detta exempel.</p>
+        
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 2rem; border: 1px solid #ccc; padding: 1rem; border-radius: 12px; background-color: #f9f9f9;">
+            <iframe data-testid="embed-iframe" style="border-radius:12px; margin-left: 1rem;" src="https://open.spotify.com/embed/track/0f9h8awV1X4jSllHXXYdfX?utm_source=generator&theme=0&si=176ce57621864c9c" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <div style="border: none; display: flex; flex-direction: column; margin: 0 1rem 0 2rem;">
+                <button id="new-btn" class="secondary" style="width: 200px; margin-bottom: 10px;">Lägg till ny bil</button>
+                <button id="load-btn" class="secondary" style="width: 200px;">Hämta bilar</button>
+            </div>
+        </div>
+
+        <section id="form-section"> 
+            <dialog id="newCarDialog">
+                <div class="dialog-content">
+                    <h3>Lägg till ny bil</h3>
+                    <span style="display: flex; flex-direction: row; ">
+                        <span style="flex: 1; margin-right: 0.5rem;">
+                            <form id="car-form">
+                                <input type="hidden" id="car-id">
+                                <div class="grid">
+                                    <label>
+                                        Märke
+                                        <input type="text" id="brand" placeholder="t.ex. Volvo" required>
+                                    </label>
+                                    <label>
+                                        Modell
+                                        <input type="text" id="model" placeholder="t.ex. 240 Turbo" required>
+                                    </label>
+                                </div>
+                                <div class="grid">
+                                    <label>
+                                        Årsmodell
+                                        <input type="number" id="year" placeholder="t.ex. 1983" required>
+                                    </label>
+                                    <label>
+                                        Färg
+                                        <input type="text" id="color" placeholder="t.ex. Silver" required>
+                                    </label>
+                                </div>
+                                <div class="button-row">
+                                    <button type="submit" id="submit-btn" class="secondary" style="flex: 1;">Spara bil</button>
+                                    <button type="button" id="cancel-btn" class="secondary" style="flex: 1;">Avbryt</button>
+                                </div>
+                            </form>
+                        </span>
+                    </span>
+                </div>
+            </dialog>
+        </section>
+ 
+        <hr style="margin: 1rem 0; margin-top: -2rem; border: none; border-top: 1px solid #ccc;">
+        
+        <section>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Våra bilar i databasen</h3>
+            </div>
+            <div id="car-list">
+                <p>Klicka på knappen <span style="font-weight: bold;">Hämta bilar</span> för att ladda in bilar...</p>
+            </div>
+        </section>   
+
+        <dialog id="editCarDialog">
+            <div class="dialog-content">
+                <h3>Redigera bil</h3>
+                <span style="display: flex; flex-direction: row; ">
+                    <span style="flex: 1; margin-right: 0.5rem;">
+                        <label for="editBrand">Märke</label>
+                        <input class="edit-input" id="editBrand" type="text">
+                        
+                        <label for="editModel">Modell</label>
+                        <input class="edit-input" id="editModel" type="text">
+                    </span>
+                    <span style="flex: 1; margin-left: 0.5rem;">
+                        <label for="editYear">Årsmodell</label>
+                        <input class="edit-input" id="editYear" type="number">
+                        
+                        <label for="editColor">Färg</label>
+                        <input class="edit-input" id="editColor" type="text">
+                    </span>
+                </span>
+                <span style="flex: 1;">
+                    <div class="button-row">
+                        <button class="secondary" id="save-edit-btn">Spara</button>
+                        <button class="secondary" id="cancel-edit-btn">Avbryt</button>
+                    </div>
+                </span>
+            </div>
+        </dialog>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
