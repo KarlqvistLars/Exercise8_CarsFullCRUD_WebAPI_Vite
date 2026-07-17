@@ -8,7 +8,7 @@ Samma som övning 7 men med Vite Typescript
 dotnet run --launch-profile https
 ```
 
-Därefter ställer er i ```/ovning8-webpage``` öppna en terminal och starta sidan med:
+Därefter ställer ni er i ```/ovning8-webpage``` öppna en terminal och starta sidan med:
 ```powershell
 npm run dev
 ```
