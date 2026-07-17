@@ -2,7 +2,9 @@
 
 Samma som övning 7 men med Vite Typescript
 
-### Starta först Minimal API från /CarApi med:
+### Starta först Minimal API:
+
+Ställ er i /CarApi öppna en termina och starta API delen med:
 
 ```powershell
 dotnet run --launch-profile https
